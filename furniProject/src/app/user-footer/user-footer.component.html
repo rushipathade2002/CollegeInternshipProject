@@ -1,0 +1,88 @@
+<footer class="footer-section">
+    <div class="container">
+
+        <div class="row align-items-start">
+
+            <!-- Left Section -->
+            <div class="col-lg-4 mb-4">
+                <img src="/images/FurnitureLogo.png" class="footer-logo" alt="logo">
+
+                <p class="footer-text">
+                    Modern furniture designed to bring comfort and elegance to your home.
+                </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/yugandhar_marathe/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/yugandhar-suryawanshi-028311228/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/YugandharSuryawanshi" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <h6>Company</h6>
+                <ul>
+                    <li><a routerLink="/user/about">About</a></li>
+                    <li><a routerLink="/user/service">Services</a></li>
+                    <li><a routerLink="/user/blog">Blog</a></li>
+                    <li><a routerLink="/user/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <h6>Support</h6>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <h6>Products</h6>
+                <ul>
+                    <li><a href="#">Chair</a></li>
+                    <li><a href="#">Sofa</a></li>
+                    <li><a href="#">Beds</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-6 col-lg-2 mb-4">
+                <h6>Subscribe</h6>
+
+                <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+                    <!-- NAME FIELD -->
+                    <input type="text" name="name" formControlName="name" class="form-control mb-2"
+                        placeholder="Enter your name">
+
+                    <!-- EMAIL FIELD -->
+                    <input type="email" name="email" formControlName="email" class="form-control mb-2"
+                        placeholder="Enter your email">
+
+                    <!-- BUTTON -->
+                    <button class="btn btn-custom w-100" type="submit" [disabled]="userForm.invalid">
+                        Send
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom text-center">
+            <p>© {{ currentYear }} All Rights Reserved | Designed by <a routerLink="#">Yugandhar Suryawanshi</a></p>
+        </div>
+
+    </div>
+</footer>
