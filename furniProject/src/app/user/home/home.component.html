@@ -17,8 +17,8 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="hero-img-wrap">
-                        <img [src]="banner_image" class="img-fluid">
+                    <div class="hero-img-wrap mt-4">
+                        <img [src]="banner_image" class="img-fluid mt-5" alt="Image">
                     </div>
                 </div>
             </div>
@@ -149,13 +149,13 @@
                         {{interior[0]?.forth_key}}
                     </li>
                 </ul>
-                <p><a herf="/user/shop" class="btn">Explore</a></p>
+                <p><a routerLink="/user/shop" class="btn btn-danger">Explore</a></p>
             </div>
         </div>
     </div>
 </div>
 <!-- End We Help Section -->
-
+ 
 <!-- Start Popular Product -->
 <div class="popular-product">
     <div class="container">
@@ -213,7 +213,7 @@
         <!-- Carousel Items -->
         <div class="carousel-inner">
             <div *ngFor="let slide of testimonial; let i = index" class="carousel-item" [class.active]="i === 0">
-                <div class="row">
+                <div class="row"> 
                     <!-- First part: Image Section -->
                     <div class="col-md-4 d-flex justify-content-center align-items-center">
                         <img [src]="'http://localhost:1000/uploads/' + slide.customer_image" alt="Image"

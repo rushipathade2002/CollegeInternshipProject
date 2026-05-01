@@ -38,9 +38,9 @@ a.more {
 /* ________________________________________________________________________________________ */
 /* Navbar styles */
 .custom-navbar {
-  background: #600000 !important;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  background: #530f0f !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
   color: white;
 }
 
@@ -84,7 +84,7 @@ a.more {
 .custom-navbar .custom-navbar-nav li a {
   font-weight: 500;
   color: #ffffff !important;
-  opacity: 0.5;
+  opacity: 1;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
@@ -113,6 +113,10 @@ a.more {
 /* Hover Effect */
 .custom-navbar .custom-navbar-nav li a:hover {
   opacity: 1;
+  transform: translate(-1px);
+  -webkit-transition: .15s all ease-out;
+  -o-transition: .15s all ease-out;
+  transition: .15s all ease-out;
 }
 
 .custom-navbar .custom-navbar-nav li a:hover::before {
@@ -224,7 +228,7 @@ a.more {
 }
 
 .hero p {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.864);
   margin-bottom: 30px;
 }
 

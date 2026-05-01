@@ -21,7 +21,7 @@ export class RegisterComponent {
   admin_password = '';
   confirmPassword = '';
   secret_key = '';
-  predifined_secret_key = 'yogi_marathe';
+  predifined_secret_key = 'rushipathade123'; // This should ideally come from a secure source, not hardcoded
   loading = false;
   otp: string[] = ['', '', '', '', '', ''];
   generatedOTP = '';
