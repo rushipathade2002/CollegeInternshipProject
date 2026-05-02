@@ -71,9 +71,7 @@ router.post('/login', (req, res) => {
             console.error(err);
             return res.status(500).json({ message: 'Database error or user not found' });
         }
-
         const user = results[0];
-
         try {
             // Verify password
             const isPasswordValid = await bcrypt.compare(user_password, user.user_password);
@@ -118,7 +116,6 @@ router.get('/userProtected', authenticateToken, (req, res) => {
 // Logout User
 router.post('/userLogout', authenticateToken, (req, res) => {
     const userToken = req.headers['authorization']?.split(' ')[1];
-
     blacklist.add(userToken);
     res.status(200).json({ message: 'Logged out successfully' });
     blacklist.add(userToken);
