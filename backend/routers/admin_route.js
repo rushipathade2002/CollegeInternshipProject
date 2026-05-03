@@ -5,7 +5,8 @@ import nodemailer from 'nodemailer';
 import { config } from '../config/config.js';
 import { exe } from '../connection.js';
 const router = express.Router();
-const blacklist = new Set();
+const blacklist = new Set(); 
+
 
 function authenticateToken(req, res, next) {
     const adminToken = req.headers['authorization']?.split(' ')[1];

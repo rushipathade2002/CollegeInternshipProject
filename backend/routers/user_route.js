@@ -145,7 +145,6 @@ router.put('/userUpdate', authenticateToken, async (req, res) => {
     if (!user_name || !user_mobile || !user_email || !user_address) {
         return res.status(400).json({ status: 'failed', message: 'All fields are required' });
     }
-
     try {
         const query = 'UPDATE users SET user_name = ?, user_mobile = ?, user_email = ?, user_address = ? WHERE user_id = ?';
         const result = await exe(query, [user_name, user_mobile, user_email, user_address, userId]);
@@ -164,11 +163,12 @@ router.put('/userUpdate', authenticateToken, async (req, res) => {
 // Update User Profile
 router.put('/userUpdateProfile', authenticateToken, async (req, res) => {
     const userId = req.user.id;
+    
 
     if (!req.files || !req.files.user_profile) {
         return res.status(400).json({ status: 'failed', message: 'Profile image is required.' });
     }
-
+ 
     try {
         const uploadedProfile = req.files.user_profile;
         const userProfileFileName = new Date().getTime() + '-' + uploadedProfile.name;
